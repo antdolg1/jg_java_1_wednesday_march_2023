@@ -22,6 +22,8 @@ public class Lesson2 {
 
         double DIV = G / B;
 
+        double SUm = ((B + G) / A) * C;
+
 
         System.out.println("Result of sum A and B and C is " + sum);
         System.out.println("Result of sub C and B is " + sub);
@@ -30,7 +32,9 @@ public class Lesson2 {
 
         System.out.println("Result of Div D and F is " + Div);
 
-        System.out.println("RESULT is " + DIV);
+        System.out.println("RESULT G and B is " + DIV);
+        System.out.println("RESULT of B-G-A is " + SUm);
+
 
 
 
