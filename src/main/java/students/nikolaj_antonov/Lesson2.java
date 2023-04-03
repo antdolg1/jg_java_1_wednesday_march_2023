@@ -25,15 +25,15 @@ public class Lesson2 {
         double SUm = ((B + G) / A) * C;
 
 
-        System.out.println("Result of sum A and B and C is " + sum);
-        System.out.println("Result of sub C and B is " + sub);
-        System.out.println("Result of div C and A is " + div);
-        System.out.println("Result of mul A and B and C is " + mul);
+        System.out.println("1.Result of sum A and B and C is " + sum);
+        System.out.println("2.Result of sub C and B is " + sub);
+        System.out.println("3.Result of div C and A is " + div);
+        System.out.println("4.Result of mul A and B and C is " + mul);
 
-        System.out.println("Result of Div D and F is " + Div);
+        System.out.println("5.Result of Div D and F is " + Div);
 
-        System.out.println("RESULT G and B is " + DIV);
-        System.out.println("RESULT of B-G-A is " + SUm);
+        System.out.println("6.RESULT G and B is " + DIV);
+        System.out.println("7.RESULT of B-G-A is " + SUm);
 
 
 
