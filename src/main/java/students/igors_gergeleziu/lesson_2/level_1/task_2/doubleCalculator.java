@@ -1,18 +1,16 @@
-package students.igors_gergeleziu.lesson_2.Task_1;
-
+package students.igors_gergeleziu.lesson_2.level_1.task_2;
 import java.util.Scanner;
-
-class integerCalculator {
-    public static void main(String[] args) {
+class doubleCalculator {
+    public static void main(String[]args){
         System.out.println("Enter first number: ");
         Scanner scanner = new Scanner(System.in);
-        int firstNumber = scanner.nextInt();
+        double firstNumber = scanner.nextDouble();
         System.out.println("Enter second number: ");
-        int secondNumber = scanner.nextInt();
-        int addition = firstNumber + secondNumber;
-        int substraction = firstNumber - secondNumber;
-        int multiplication = firstNumber * secondNumber;
-        int division = firstNumber / secondNumber;
+        double secondNumber = scanner.nextDouble();
+        double addition = firstNumber + secondNumber;
+        double substraction = firstNumber - secondNumber;
+        double multiplication = firstNumber * secondNumber;
+        double division = firstNumber / secondNumber;
         System.out.println("Operations: ");
         System.out.println(firstNumber + "+" + secondNumber + "= " + addition);
         System.out.println(firstNumber + "-" + secondNumber + "= " + substraction);

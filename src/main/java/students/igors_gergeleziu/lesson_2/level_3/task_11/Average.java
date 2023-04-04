@@ -1,4 +1,4 @@
-package students.igors_gergeleziu.lesson_2.Task_11;
+package students.igors_gergeleziu.lesson_2.level_3.task_11;
 import java.util.Scanner;
 class Average {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package students.igors_gergeleziu.lesson_2.Task_9;
+package students.igors_gergeleziu.lesson_2.level_3.task_9;
 import java.util.Scanner;
 
 class Multiplication {

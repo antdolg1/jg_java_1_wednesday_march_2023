@@ -1,4 +1,4 @@
-package students.igors_gergeleziu.lesson_2.Task_8;
+package students.igors_gergeleziu.lesson_2.level_2.task_8;
 import java.util.Scanner;
 class Hello {
     public static void main(String[] args) {

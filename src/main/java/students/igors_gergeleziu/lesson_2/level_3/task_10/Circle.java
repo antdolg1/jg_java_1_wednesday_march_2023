@@ -1,7 +1,6 @@
-package students.igors_gergeleziu.lesson_2.Task_10;
+package students.igors_gergeleziu.lesson_2.level_3.task_10;
 
 import java.util.Scanner;
-import java.math.*;
 
 class Circle {
     public static void main(String[] args) {
