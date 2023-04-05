@@ -1,4 +1,4 @@
-package students.Jegors_Rutkovskis.lesson_2.level_2;
+package students.jegors_rutkovskis.lesson_2.level_2;
 
 import java.util.Scanner;
 
