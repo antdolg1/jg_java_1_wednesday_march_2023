@@ -2,22 +2,22 @@
 
 teacher
     lesson_1
-        students.student_jurij_hlebnikov.lesson_2.homework
-            level_1
+        students.student_jurij_hlebnikov.students.edmund_zukovskis.lesson_2.homework
+            students.edmund_zukovskis.lesson_2.level_1
                 Task_1
                 Task_2
-            level_2
+            students.edmund_zukovskis.lesson_2.level_2
                 Task_3
                 Task_4
             level_3
                 Task_5
                 ...
-    lesson_2
-        students.student_jurij_hlebnikov.lesson_2.homework
-            level_1
+    students.edmund_zukovskis.lesson_2
+        students.student_jurij_hlebnikov.students.edmund_zukovskis.lesson_2.homework
+            students.edmund_zukovskis.lesson_2.level_1
                 Task_1
                 Task_2
-            level_2
+            students.edmund_zukovskis.lesson_2.level_2
                 Task_3
                 Task_4
                 Task_5
