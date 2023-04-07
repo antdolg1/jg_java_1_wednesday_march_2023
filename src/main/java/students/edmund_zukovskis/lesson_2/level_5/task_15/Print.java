@@ -1,4 +1,4 @@
-package students.edmund_zukovskis.lesson_2.level_5;
+package students.edmund_zukovskis.lesson_2.level_5.task_15;
 
 class Print {
     public static void main(String[] args) {
