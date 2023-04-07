@@ -12,5 +12,10 @@ public class testclass {
         int sum = number1 + number2;
 
         System.out.println("Sum of number1 and number2 is " + sum);
+        System.out.println(10 / 4);
+        System.out.println(10 / 4.0);
+
+
+
     }
 }
