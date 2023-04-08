@@ -2,10 +2,10 @@ package students.andrej_mihailicenko.lesson_2.level_3;
 import java.util.Scanner;
 public class Multiplication {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Test Data: ");
         System.out.println("Input a number: ");
-        int n = in.nextInt();
+        int n = scanner.nextInt();
         System.out.println();
         System.out.println("Expected Output : ");
 

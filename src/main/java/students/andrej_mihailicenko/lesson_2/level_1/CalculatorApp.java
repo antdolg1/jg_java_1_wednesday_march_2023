@@ -1,5 +1,4 @@
 package students.andrej_mihailicenko.lesson_2.level_1;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 public class CalculatorApp {
     public static void main(String[] args) {

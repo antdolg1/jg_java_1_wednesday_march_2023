@@ -5,11 +5,11 @@ public class Circle {
         Scanner in = new Scanner(System.in);
 
         System.out.println("Input circle radius: ");
-        double rad = in.nextDouble();
+        double radius = in.nextDouble();
 
-        double per = 2 * Math.PI * rad;
-        double area = Math.PI * Math.pow(rad,2.0); //Math.pow() возводит в степень
-        System.out.println("Perimeter is = " + per);
+        double perimeter = 2 * Math.PI * radius;
+        double area = Math.PI * Math.pow(radius,2.0); //Math.pow() возводит в степень
+        System.out.println("Perimeter is = " + perimeter);
         System.out.println("Area is = " + area);
 
     }
