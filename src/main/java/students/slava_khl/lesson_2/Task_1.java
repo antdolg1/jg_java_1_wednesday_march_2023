@@ -1,4 +1,4 @@
-package students.slava_khl;
+package students.slava_khl.lesson_2;
 
 public class Task_1 {
 
