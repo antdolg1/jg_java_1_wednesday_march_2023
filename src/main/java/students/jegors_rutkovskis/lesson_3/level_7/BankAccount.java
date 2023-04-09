@@ -13,8 +13,8 @@ class BankAccount {
         return this.owner;
     }
 
-    String getMoney() {
-        return "" + money;
+    int getMoney() {
+        return this.money;
     }
 
 }

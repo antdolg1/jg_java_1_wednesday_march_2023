@@ -4,7 +4,7 @@ class Car {
     private String carBrand;
     private String carColor;
     private int fuelTank;
-    private final int MAX_FUEL_IN_TANK = 20;
+    private static final int MAX_FUEL_IN_TANK = 20;
     private int maxSpeed;
     private int currentSpeed;
 
@@ -24,13 +24,13 @@ class Car {
             System.err.println("it is impossible to accelerate " +
                     "because the maximum speed has been reached");
         }
-        fuelTank -= 5;
+        decreaseFuel();
     }
     void brake(){
         currentSpeed = 0;
         System.out.println("Car is stopped...");
     }
-    private String currentSpeed(){
+    String currentSpeed(){
         return "Current speed is "
                 + currentSpeed + "km/h";
     }
@@ -60,5 +60,24 @@ class Car {
         System.out.println(currentSpeed());
         System.out.println("Maximal speed for this model is " + maxSpeed + "km/h");
         System.out.println("   **********");
+    }
+    void decreaseFuel(){
+        fuelTank -= 5;
+    }
+
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+
+    public String getCarColor() {
+        return carColor;
+    }
+
+    public void setCarColor(String carColor) {
+        this.carColor = carColor;
     }
 }
