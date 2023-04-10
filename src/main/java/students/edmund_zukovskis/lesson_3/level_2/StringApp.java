@@ -1,6 +1,6 @@
 package students.edmund_zukovskis.lesson_3.level_2;
 
-public class StringApp {
+class StringApp {
     public static void main(StringApp[] args) {
 
         String myName = "Edmunds";

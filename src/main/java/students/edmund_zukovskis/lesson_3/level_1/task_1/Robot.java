@@ -1,6 +1,6 @@
 package students.edmund_zukovskis.lesson_3.level_1.task_1;
 
-public class Robot {
+class Robot {
     public Robot() {
     }
     public void sayHello() {

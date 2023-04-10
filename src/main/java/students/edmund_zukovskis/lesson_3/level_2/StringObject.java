@@ -1,6 +1,6 @@
 package students.edmund_zukovskis.lesson_3.level_2;
 
-public class StringObject {
+class StringObject {
     public static void main(String[] args) {
         String s1 = "Edmunds";
         String s2 = "Edmunds";
