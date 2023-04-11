@@ -1,4 +1,4 @@
-package students.nikolaj_antonov.lesson_2.level_2.task_7;
+package students.nikolaj_antonov.lesson_2.level_2.Task_7;
 
 class LoginService {
 

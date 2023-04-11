@@ -1,4 +1,4 @@
-package students.nikolaj_antonov.lesson_2.level_5;
+package students.nikolaj_antonov.lesson_2.level_5.Task_18;
 
 class SizeMatters {
 
