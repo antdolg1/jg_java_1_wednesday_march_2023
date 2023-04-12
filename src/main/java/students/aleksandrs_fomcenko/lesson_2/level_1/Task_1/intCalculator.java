@@ -2,10 +2,10 @@ package students.aleksandrs_fomcenko.lesson_2.level_1.Task_1;
 import  java.util.Scanner;
 public class intCalculator {
     public static void main(String[] args)  {
-        System.out.println("Write first number" );
+        System.out.println("Input first number" );
         Scanner scanner = new Scanner(System.in);
         int firstNumber = scanner.nextInt();
-        System.out.println("Write second number" );
+        System.out.println("Input second number" );
         int secondNumber = scanner.nextInt();
 
         int sum = firstNumber + secondNumber;
