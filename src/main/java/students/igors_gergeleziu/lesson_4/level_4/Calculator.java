@@ -1,5 +1,4 @@
 package students.igors_gergeleziu.lesson_4.level_4;
-import java.util.Scanner;
 class Calculator {
     int number1;
     int number2;

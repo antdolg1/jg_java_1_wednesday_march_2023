@@ -41,11 +41,10 @@ public class Numbers {
         this.number2 = scanner.nextInt();
     }
 
-    int setWholeNumber() {
+    void setWholeNumber() {
         System.out.println("Enter your number: ");
         Scanner scanner = new Scanner(System.in);
         this.wholeNumber = scanner.nextInt();
-        return wholeNumber;
     }
 
     String isNumberPositiveOrNegative() {
