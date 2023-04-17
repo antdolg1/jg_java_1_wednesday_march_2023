@@ -137,7 +137,7 @@ public class Numbers {
     }
 
     public String equalOrDifferentThreeNumbers() {
-        if (number1 == number2 && number2 == number3 && number3 == number1) {
+        if (number1 == number2 && number2 == number3) {
             System.out.println(number1 + ", " + number2 + " and " + number3 + " are all equal");
             return "Equal";
         } else if (number1 != number2 && number2 != number3 && number3 != number1) {
