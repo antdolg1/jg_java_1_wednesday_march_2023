@@ -69,29 +69,37 @@ public class Numbers {
 
     String dayOfTheWeek() {
         switch (wholeNumber) {
-            case 1:
+            case 1 -> {
                 System.out.println("It is Monday");
                 return "Monday";
-            case 2:
+            }
+            case 2 -> {
                 System.out.println("It is Tuesday");
                 return "Tuesday";
-            case 3:
+            }
+            case 3 -> {
                 System.out.println("It is Wednesday");
                 return "Wednesday";
-            case 4:
+            }
+            case 4 -> {
                 System.out.println("It is Thursday");
                 return "Thursday";
-            case 5:
+            }
+            case 5 -> {
                 System.out.println("It is Friday");
                 return "Friday";
-            case 6:
+            }
+            case 6 -> {
                 System.out.println("It is Saturday");
                 return "Saturday";
-            case 7:
+            }
+            case 7 -> {
                 System.out.println("It is Sunday");
                 return "Sunday";
-            default:
+            }
+            default -> {
                 return "No such day in our reality";
+            }
         }
     }
 
