@@ -6,8 +6,7 @@ public class DifferentOrEquals {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        boolean continueProgram = true;
-        while (continueProgram) {
+        while (true) {
 
             System.out.println("Input first integer number: ");
             int firstNumber = scanner.nextInt();
@@ -21,18 +20,15 @@ public class DifferentOrEquals {
                 System.out.println("Numbers are different");
             }
 
+            System.out.println("Continue?(y/n)");
+            String answer = scanner.next();
 
-            String answer;
-            while (true) {
-                System.out.println("Continue?(y/n)");
-                answer = scanner.next();
-                if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("n")) {
-                    break;
-                }
-                System.out.println("Invalid input. Please enter 'y' or 'n'.");
-            }
             if (answer.equalsIgnoreCase("n")) {
-                continueProgram = false;
+                break;
+            } else if (answer.equalsIgnoreCase("y")) {
+
+            } else {
+                System.out.println("Invalid input. Please enter 'y' or 'n'.");
             }
         }
     }
