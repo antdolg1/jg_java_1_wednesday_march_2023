@@ -9,22 +9,29 @@ public class DifferentOrEquals {
         boolean continueProgram = true;
         while (continueProgram) {
 
-        System.out.println("Input first integer number: ");
-        int firstNumber = scanner.nextInt();
-        System.out.println("Input second integer number: ");
-        int secondNumber = scanner.nextInt();
+            System.out.println("Input first integer number: ");
+            int firstNumber = scanner.nextInt();
+            System.out.println("Input second integer number: ");
+            int secondNumber = scanner.nextInt();
 
 
-        if (firstNumber == secondNumber){
-            System.out.println("Numbers are equals");
-        } else {
-            System.out.println("Numbers are different");
-        }
+            if (firstNumber == secondNumber) {
+                System.out.println("Numbers are equals");
+            } else {
+                System.out.println("Numbers are different");
+            }
 
 
-        System.out.println("Continue?(y/n)");
-            String answer = scanner.next();
-            if (!answer.equalsIgnoreCase("y")) {
+            String answer;
+            while (true) {
+                System.out.println("Continue?(y/n)");
+                answer = scanner.next();
+                if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("n")) {
+                    break;
+                }
+                System.out.println("Invalid input. Please enter 'y' or 'n'.");
+            }
+            if (answer.equalsIgnoreCase("n")) {
                 continueProgram = false;
             }
         }

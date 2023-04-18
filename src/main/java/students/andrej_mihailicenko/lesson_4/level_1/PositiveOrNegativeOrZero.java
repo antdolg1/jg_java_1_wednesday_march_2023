@@ -1,5 +1,7 @@
 package students.andrej_mihailicenko.lesson_4.level_1;
+
 import java.util.Scanner;
+
 class PositiveOrNegativeOrZero {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,9 +18,16 @@ class PositiveOrNegativeOrZero {
                 System.out.println("Number is zero!");
             }
 
-            System.out.println("Continue?(y/n)");
-            String answer = scanner.next();
-            if (!answer.equalsIgnoreCase("y")) {
+            String answer;
+            while (true) {
+                System.out.println("Continue?(y/n)");
+                answer = scanner.next();
+                if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("n")) {
+                    break;
+                }
+                System.out.println("Invalid input. Please enter 'y' or 'n'.");
+            }
+            if (answer.equalsIgnoreCase("n")) {
                 continueProgram = false;
             }
         }
