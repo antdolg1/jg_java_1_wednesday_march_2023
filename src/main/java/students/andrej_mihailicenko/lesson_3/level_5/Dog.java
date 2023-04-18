@@ -1,4 +1,5 @@
 package students.andrej_mihailicenko.lesson_3.level_5;
+
 class Dog {
     String name;
     int age;
@@ -10,7 +11,7 @@ class Dog {
         this.color = dogColor;
     }
 
-    void voice(){
+    void voice() {
         System.out.println("The dogs name is: " + name.repeat(3));
         System.out.println("The dogs age is: " + age);
         System.out.println("The dogs color is: " + color);
