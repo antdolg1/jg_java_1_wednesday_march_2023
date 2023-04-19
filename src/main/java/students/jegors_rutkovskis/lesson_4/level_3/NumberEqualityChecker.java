@@ -14,7 +14,8 @@ class NumberEqualityChecker {
 
         if (firstNumber == secondNumber && firstNumber == thirdNumber){
             System.out.println("All numbers are equal");
-        } else if (firstNumber != secondNumber && firstNumber != thirdNumber){
+        } else if (firstNumber != secondNumber && firstNumber != thirdNumber
+                && secondNumber != thirdNumber){
             System.out.println("All numbers are different");
         } else {
             System.out.println("Neither all are equal or different");
