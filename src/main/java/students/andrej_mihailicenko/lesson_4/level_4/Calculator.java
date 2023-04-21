@@ -17,13 +17,11 @@ class Calculator {
         return firstNumber / secondNumber;
     }
 
-    public boolean isFirstEven(int firstNumber) {
-        return firstNumber % 2 == 0;
+    public boolean isEven(int number) {
+        return number % 2 == 0;
+
     }
 
-    public boolean isSecondEven(int secondNumber) {
-        return secondNumber % 2 == 0;
-    }
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
         if (firstNumber > secondNumber) {

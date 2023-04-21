@@ -7,8 +7,7 @@ class CalculatorTest {
         calculatorTest.subtractTest();
         calculatorTest.multiplyTest();
         calculatorTest.divisionTest();
-        calculatorTest.isFirstEvenTest();
-        calculatorTest.isSecondEvenTest();
+        calculatorTest.isEvenTest();
         calculatorTest.firstMaxOfTwoNumbersTest();
         calculatorTest.secondMaxOfTwoNumbersTest();
         calculatorTest.thirdMaxOfTwoNumbersTest();
@@ -73,27 +72,15 @@ class CalculatorTest {
         }
     }
 
-    public void isFirstEvenTest() {
-        int firstNumber = 10;
+    public void isEvenTest() {
+        int number = 10;
         boolean expectedResult = true;
         Calculator calculator = new Calculator();
-        boolean realResult = calculator.isFirstEven(10);
-        if (firstNumber % 2 == 0) {
-            System.out.println("Firs Even test = OK");
+        boolean realResult = calculator.isEven(10);
+        if (number % 2 == 0) {
+            System.out.println("Even test = OK");
         } else {
-            System.out.println("First Even test = FAIL");
-        }
-    }
-
-    public void isSecondEvenTest() {
-        int secondNumber = 5;
-        boolean expectedResult = false;
-        Calculator calculator = new Calculator();
-        boolean realResult = calculator.isSecondEven(5);
-        if (secondNumber % 2 == 0) {
-            System.out.println("Second Odd test = FAIL");
-        } else {
-            System.out.println("Second Odd test = OK");
+            System.out.println("Even test = FAIL");
         }
     }
 
