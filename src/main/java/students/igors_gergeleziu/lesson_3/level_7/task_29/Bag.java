@@ -24,8 +24,8 @@ class Bag {
         this.itemAmount += items;
     }
 
-    int getItemAmount() {
-        return this.itemAmount;
+    void getItemAmount() {
+        System.out.println(bagBrand + " contains " + this.itemAmount + " items");
     }
 
     void bagUnpack() {
@@ -34,8 +34,13 @@ class Bag {
     }
 
     boolean isBagEmpty() {
-        if (this.itemAmount >= 1) this.isBagEmpty = false;
-        else this.isBagEmpty = true;
+        if (this.itemAmount >= 1) {
+            System.out.println("Bag is not empty");
+            this.isBagEmpty = false;
+        } else {
+            this.isBagEmpty = true;
+            System.out.println("Bag is empty");
+        }
         return isBagEmpty;
     }
 

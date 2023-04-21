@@ -5,24 +5,24 @@ class Product {
     double regularPrice;
     double discount;
 
-    Product(String name){
-        this.name=name;
+    Product(String name) {
+        this.name = name;
     }
 
-    public void setRegularPrice(double regularPrice) {
+    void setRegularPrice(double regularPrice) {
         this.regularPrice = regularPrice;
     }
 
-    public void setDiscount(double discount) {
+    void setDiscount(double discount) {
         this.discount = discount;
     }
 
-    double actualPrice(){
-        double actualPrice=regularPrice-(regularPrice*(discount*0.01));
-        return actualPrice;
+    double actualPrice() {
+        return regularPrice - (regularPrice * (discount * 0.01));
     }
-    void printInformation(){
-        System.out.println("Product: name= \""+name+"\", "+"regular price= "+regularPrice+" EUR, discount= "+(int)discount+"%, actual price= "+actualPrice()+" EUR");
+
+    void printInformation() {
+        System.out.println("Product: name= \"" + name + "\", " + "regular price= " + regularPrice + " EUR, discount= " + (int) discount + "%, actual price= " + actualPrice() + " EUR");
 
     }
 }
