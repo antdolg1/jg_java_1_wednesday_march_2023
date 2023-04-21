@@ -5,49 +5,49 @@ import teacher.lesson_4.homework.level_7_senior.solutions.super_task_4.LightColo
 class LightColorDetectorTest {
     public static void main(String[] args) {
         LightColorDetectorTest test = new LightColorDetectorTest();
-        test.testViolet(412);
-        test.testBlue(480);
-        test.testGreen(525);
-        test.testYellow(576);
-        test.testOrange(602);
-        test.testRed(745);
-        test.testInvisibleLight(0);
+        test.violetTest(412);
+        test.blueTest(480);
+        test.greenTest(525);
+        test.yellowTest(576);
+        test.orangeTest(602);
+        test.redTest(745);
+        test.invisibleLightTest(0);
 
     }
 
-    void testViolet(int waveLenght) {
+    void violetTest(int waveLenght) {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        checkResult(lightColorDetector.detect(waveLenght).equals("Violet"), "TestViolet");
+        checkResult(lightColorDetector.detect(waveLenght).equals("Violet"), "violetTest");
     }
 
-    void testBlue(int waveLenght) {
+    void blueTest(int waveLenght) {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        checkResult(lightColorDetector.detect(waveLenght).equals("Blue"), "testBlue");
+        checkResult(lightColorDetector.detect(waveLenght).equals("Blue"), "blueTest");
     }
 
-    void testGreen(int waveLenght) {
+    void greenTest(int waveLenght) {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        checkResult(lightColorDetector.detect(waveLenght).equals("Green"), "testGreen");
+        checkResult(lightColorDetector.detect(waveLenght).equals("Green"), "greenTest");
     }
 
-    void testYellow(int waveLenght) {
+    void yellowTest(int waveLenght) {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        checkResult(lightColorDetector.detect(waveLenght).equals("Yellow"), "testYellow");
+        checkResult(lightColorDetector.detect(waveLenght).equals("Yellow"), "yellowTest");
     }
 
-    void testOrange(int waveLenght) {
+    void orangeTest(int waveLenght) {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        checkResult(lightColorDetector.detect(waveLenght).equals("Orange"), "testOrange");
+        checkResult(lightColorDetector.detect(waveLenght).equals("Orange"), "orangeTest");
     }
 
-    void testRed(int waveLenght) {
+    void redTest(int waveLenght) {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        checkResult(lightColorDetector.detect(waveLenght).equals("Red"), "testRed");
+        checkResult(lightColorDetector.detect(waveLenght).equals("Red"), "redTest");
     }
 
-    void testInvisibleLight(int waveLenght) {
+    void invisibleLightTest(int waveLenght) {
         LightColorDetector lightColorDetector = new LightColorDetector();
-        checkResult(lightColorDetector.detect(waveLenght).equals("Invisible Light"), "testInvisibleLight");
+        checkResult(lightColorDetector.detect(waveLenght).equals("Invisible Light"), "invisibleLightTest");
     }
 
     void checkResult(boolean condition, String testName) {
