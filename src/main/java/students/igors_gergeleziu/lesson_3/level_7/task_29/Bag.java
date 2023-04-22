@@ -13,7 +13,7 @@ class Bag {
         this.bagSize = bagSize;
     }
 
-    void getBagInformation() {
+    void printBagInformation() {
         System.out.println("Bag: " + bagBrand);
         System.out.println("Color: " + bagColor);
         System.out.println("Size: " + bagSize);
@@ -24,7 +24,7 @@ class Bag {
         this.itemAmount += items;
     }
 
-    void getItemAmount() {
+    void printItemAmount() {
         System.out.println(bagBrand + " contains " + this.itemAmount + " items");
     }
 

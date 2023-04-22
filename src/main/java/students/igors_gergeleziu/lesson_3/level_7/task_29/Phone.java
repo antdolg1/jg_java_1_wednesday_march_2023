@@ -1,58 +1,58 @@
 package students.igors_gergeleziu.lesson_3.level_7.task_29;
 
 class Phone {
-    String Corporation;
-    String Model;
-    String Color;
-    double ScreenSize;
-    int DisplayResolutionWidth;
-    int DisplayResolutionHeight;
-    int Memory;
+    String corporation;
+    String model;
+    String color;
+    double screenSize;
+    int displayResolutionWidth;
+    int displayResolutionHeight;
+    int memory;
 
     Phone() {
 
     }
 
-    Phone(String Corporation, String Model, String Color, double ScreenSize, int DisplayResolutionWidth, int DisplayResolutionHeight, int Memory) {
-        this.Corporation = Corporation;
-        this.Model = Model;
-        this.Color = Color;
-        this.ScreenSize = ScreenSize;
-        this.DisplayResolutionWidth = DisplayResolutionWidth;
-        this.DisplayResolutionHeight = DisplayResolutionHeight;
-        this.Memory = Memory;
+    Phone(String corporation, String model, String color, double screenSize, int displayResolutionWidth, int displayResolutionHeight, int memory) {
+        this.corporation = corporation;
+        this.model = model;
+        this.color = color;
+        this.screenSize = screenSize;
+        this.displayResolutionWidth = displayResolutionWidth;
+        this.displayResolutionHeight = displayResolutionHeight;
+        this.memory = memory;
     }
 
     void phoneInformation() {
-        System.out.println("Phone: " + Corporation + " " + Model);
-        System.out.println("Color: " + Color);
-        System.out.println("Screen size: " + ScreenSize + "\'\'");
-        System.out.println("Resolution: " + DisplayResolutionWidth + "X" + DisplayResolutionHeight);
-        System.out.println("Memory: " + Memory + " GB");
+        System.out.println("Phone: " + corporation + " " + model);
+        System.out.println("Color: " + color);
+        System.out.println("Screen size: " + screenSize + "\'\'");
+        System.out.println("Resolution: " + displayResolutionWidth + "X" + displayResolutionHeight);
+        System.out.println("Memory: " + memory + " GB");
     }
 
     String getPhoneCorporation() {
-        return Corporation;
+        return corporation;
     }
 
     String getPhoneModel() {
-        return Model;
+        return model;
     }
 
     String getColor() {
-        return Color;
+        return color;
     }
 
     double getScreenSize() {
-        return ScreenSize;
+        return screenSize;
     }
 
     String getPhoneDisplayResolution() {
-        return DisplayResolutionWidth + "X" + DisplayResolutionHeight;
+        return displayResolutionWidth + "X" + displayResolutionHeight;
     }
 
     int getMemory() {
-        return Memory;
+        return memory;
     }
 
     void call(String contact) {

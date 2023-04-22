@@ -17,12 +17,12 @@ class Product {
         this.discount = discount;
     }
 
-    double actualPrice() {
+    double getActualPrice() {
         return regularPrice - (regularPrice * (discount * 0.01));
     }
 
     void printInformation() {
-        System.out.println("Product: name= \"" + name + "\", " + "regular price= " + regularPrice + " EUR, discount= " + (int) discount + "%, actual price= " + actualPrice() + " EUR");
+        System.out.println("Product: name= \"" + name + "\", " + "regular price= " + regularPrice + " EUR, discount= " + (int) discount + "%, actual price= " + getActualPrice() + " EUR");
 
     }
 }
