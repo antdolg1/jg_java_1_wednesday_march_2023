@@ -11,13 +11,11 @@ public class IfElseNumber {
 
         int number = scanner.nextInt();
 
-        if (number > 0){
+        if (number > 0) {
             System.out.println("This number is positive");
-        }
-        else if (number < 0) {
+        } else if (number < 0) {
             System.out.println("This number is negative");
-        }
-        else {
+        } else {
             System.out.println("This number is Zero");
         }
     }

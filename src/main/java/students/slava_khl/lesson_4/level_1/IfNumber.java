@@ -11,11 +11,11 @@ public class IfNumber {
 
         int number = scanner.nextInt();
 
-            if (number < 0) {
-                System.out.println("This number is negative");
-            }
-             if (number > 0) {
-                System.out.println("This number is positive");
-            }
+        if (number < 0) {
+            System.out.println("This number is negative");
+        }
+        if (number > 0) {
+            System.out.println("This number is positive");
         }
     }
+}

@@ -12,10 +12,10 @@ public class LargestNumber {
         System.out.println("Please enter second whole number: ");
         int Number2 = reader.nextInt();
 
-            if (Number1 > Number2) {
-                System.out.println(Number1 + " is largest number");
-            } else {
-                System.out.println(Number2 + " is largest number");
-            }
+        if (Number1 > Number2) {
+            System.out.println(Number1 + " is largest number");
+        } else {
+            System.out.println(Number2 + " is largest number");
         }
+    }
 }

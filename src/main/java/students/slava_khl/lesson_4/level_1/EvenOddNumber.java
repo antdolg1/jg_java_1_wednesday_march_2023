@@ -11,10 +11,9 @@ public class EvenOddNumber {
 
         int enteredNumber = reader.nextInt();
 
-        if(enteredNumber % 2 == 0) {
+        if (enteredNumber % 2 == 0) {
             System.out.println(enteredNumber + " it is Even number");
-        }
-        else {
+        } else {
             System.out.println(enteredNumber + " it is Odd number");
         }
     }
