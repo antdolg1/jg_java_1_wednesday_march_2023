@@ -7,15 +7,15 @@ public class SmallestNumber {
 
         Scanner reader = new Scanner(System.in);
         System.out.println("Please enter first whole number: ");
-        int Number1 = reader.nextInt();
+        int number1 = reader.nextInt();
 
         System.out.println("Please enter second whole number: ");
-        int Number2 = reader.nextInt();
+        int number2 = reader.nextInt();
 
-        if (Number1 < Number2) {
-            System.out.println(Number1 + " is smallest number");
+        if (number1 < number2) {
+            System.out.println(number1 + " is smallest number");
         } else {
-            System.out.println(Number2 + " is smallest number");
+            System.out.println(number2 + " is smallest number");
         }
     }
 }

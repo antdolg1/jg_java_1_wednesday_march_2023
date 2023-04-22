@@ -6,6 +6,7 @@ public class EvenOddNumber {
 
     public static void main(String[] args) {
 
+
         Scanner reader = new Scanner(System.in);
         System.out.println("Please enter whole number : ");
 

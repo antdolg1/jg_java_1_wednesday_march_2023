@@ -8,17 +8,17 @@ public class Increasing {
 
         System.out.println("Please enter first number: ");
         Scanner reader = new Scanner(System.in);
-        int Number1 = reader.nextInt();
+        int number1 = reader.nextInt();
 
         System.out.println("Please enter second number:  ");
-        int Number2 = reader.nextInt();
+        int number2 = reader.nextInt();
 
         System.out.println("Please enter third number:  ");
-        int Number3 = reader.nextInt();
+        int number3 = reader.nextInt();
 
-        if (Number1 < Number2 && Number2 < Number3) {
+        if (number1 < number2 && number2 < number3) {
             System.out.println("Increasing order of number");
-        } else if (Number1 > Number2 && Number2 > Number3) {
+        } else if (number1 > number2 && number2 > number3) {
             System.out.println("Decreasing order of number");
         } else {
             System.out.println("Neither increasing or decreasing order");

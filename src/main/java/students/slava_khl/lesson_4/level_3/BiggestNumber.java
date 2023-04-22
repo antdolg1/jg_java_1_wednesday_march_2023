@@ -8,20 +8,20 @@ public class BiggestNumber {
 
         System.out.println("Please enter first number: ");
         Scanner reader = new Scanner(System.in);
-        int Number1 = reader.nextInt();
+        int number1 = reader.nextInt();
 
         System.out.println("Please enter second number:  ");
-        int Number2 = reader.nextInt();
+        int number2 = reader.nextInt();
 
         System.out.println("Please enter third number:  ");
-        int Number3 = reader.nextInt();
+        int number3 = reader.nextInt();
 
-        if (Number1 > Number2 && Number1 > Number3) {
-            System.out.println(Number1 + " is the biggest numbers");
-        } else if (Number2 > Number1 && Number2 > Number3) {
-            System.out.println(Number2 + " is the biggest numbers");
+        if (number1 > number2 && number1 > number3) {
+            System.out.println(number1 + " is the biggest numbers");
+        } else if (number2 > number1 && number2 > number3) {
+            System.out.println(number2 + " is the biggest numbers");
         } else {
-            System.out.println(Number3 + " is the biggest numbers");
+            System.out.println(number3 + " is the biggest numbers");
         }
     }
 }
