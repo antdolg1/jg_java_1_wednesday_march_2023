@@ -33,7 +33,7 @@ class Bag {
         this.itemAmount = 0;
     }
 
-    boolean isBagEmpty() {
+    void isBagEmpty() {
         if (this.itemAmount >= 1) {
             System.out.println("Bag is not empty");
             this.isBagEmpty = false;
@@ -41,7 +41,6 @@ class Bag {
             this.isBagEmpty = true;
             System.out.println("Bag is empty");
         }
-        return isBagEmpty;
     }
 
 }

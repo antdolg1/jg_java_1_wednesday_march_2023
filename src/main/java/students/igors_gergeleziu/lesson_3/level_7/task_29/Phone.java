@@ -9,9 +9,7 @@ class Phone {
     int displayResolutionHeight;
     int memory;
 
-    Phone() {
-
-    }
+    //Phone() {} default constructor
 
     Phone(String corporation, String model, String color, double screenSize, int displayResolutionWidth, int displayResolutionHeight, int memory) {
         this.corporation = corporation;
@@ -26,7 +24,7 @@ class Phone {
     void phoneInformation() {
         System.out.println("Phone: " + corporation + " " + model);
         System.out.println("Color: " + color);
-        System.out.println("Screen size: " + screenSize + "\'\'");
+        System.out.println("Screen size: " + screenSize + "''");
         System.out.println("Resolution: " + displayResolutionWidth + "X" + displayResolutionHeight);
         System.out.println("Memory: " + memory + " GB");
     }
