@@ -7,8 +7,9 @@ class DogDemo {
         dog1.dogName = "Bobik";
         dog1.dogAge = 10;
 
-
+        dog1.bark();
         dog1.voice();
+        dog1.bark();
         dog1.happyBirthday();
     }
 

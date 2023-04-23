@@ -1,4 +1,4 @@
-package students.nikolaj_antonov.lesson_3.level_5.Task_20;
+package students.nikolaj_antonov.lesson_3.level_5.Task_19;
 
 class Dog {
     String dogName;
@@ -8,15 +8,9 @@ class Dog {
         this.dogName = name;
         this.dogAge = age;
     }
-    void bark() {
-        System.out.println("Woof woof");
-    }
+
     void voice() {
         System.out.println("Dog name is: " + dogName + ", age is: "+ dogAge);
-    }
-    void happyBirthday() {
-        dogAge++;
-        System.out.println("Dog age is: "+ dogAge);
     }
 
 }
