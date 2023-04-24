@@ -14,11 +14,5 @@ class StringObject {
 
         boolean nameMatch2 = s1.equals(s3);
         System.out.println(nameMatch2);
-
-
-
-
-
-
     }
 }

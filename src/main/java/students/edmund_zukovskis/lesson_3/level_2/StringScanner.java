@@ -12,8 +12,5 @@ class StringScanner {
         String greeting = "Hello, ";
 
         System.out.println(greeting.concat(name));
-
-
-
     }
 }

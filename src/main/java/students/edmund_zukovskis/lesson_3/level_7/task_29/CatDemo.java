@@ -25,8 +25,5 @@ class CatDemo {
 
         cat1.addSpeed(5);
         System.out.println(catBreed + " cat new speed is: " + cat1.catSpeed);
-
-
-
     }
 }

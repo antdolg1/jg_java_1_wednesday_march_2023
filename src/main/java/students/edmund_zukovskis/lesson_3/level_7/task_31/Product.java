@@ -22,14 +22,14 @@ class Product {
     public void setDiscount(double discount) {
         this.discount = discount;
     }
+
     void printAllInformation() {
         DecimalFormat decimalFormat = new DecimalFormat("#.00");
         System.out.println("Product " + productName);
         System.out.println("Regular price is " + regularPrice);
         System.out.println("Discount is " + discount);
         System.out.println("Actual price is " + decimalFormat.format(actualPrice()));
-
     }
-    }
+}
 
 
