@@ -8,6 +8,9 @@ class Println {
         System.out.println("am ");
         System.out.println("a ");
         System.out.println("student.");
+
+        System.out.println("----------");
+
         System.out.print("Hello, ");
         System.out.print("I am a student.");
 
