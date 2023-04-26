@@ -1,4 +1,5 @@
 package students.vladislav_antoniv.lesson_4.level_1;
+
 import java.util.Scanner;
 
 public class WeekDaysFromEnteredNumber {
@@ -6,11 +7,10 @@ public class WeekDaysFromEnteredNumber {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter number");
         int number = scan.nextInt();
-        if(number>7||number<1){
+        if (number > 7 || number < 1) {
             System.out.println("Incorrect input");
-        }
-        else {
-            switch (number){
+        } else {
+            switch (number) {
                 case 1:
                     System.out.println("Monday");
                     break;
@@ -32,6 +32,7 @@ public class WeekDaysFromEnteredNumber {
                 case 7:
                     System.out.println("Sunday");
                     break;
+                default:
             }
         }
     }

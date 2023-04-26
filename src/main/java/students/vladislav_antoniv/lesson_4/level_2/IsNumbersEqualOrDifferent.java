@@ -1,4 +1,5 @@
 package students.vladislav_antoniv.lesson_4.level_2;
+
 import java.util.Scanner;
 
 public class IsNumbersEqualOrDifferent {
@@ -9,10 +10,9 @@ public class IsNumbersEqualOrDifferent {
         System.out.println("Enter second number");
         int secondNumber = scan.nextInt();
 
-        if (firstNumber == secondNumber){
+        if (firstNumber == secondNumber) {
             System.out.println("Numbers are equal");
-        }
-        else{
+        } else {
             System.out.println("Numbers are different");
         }
     }
