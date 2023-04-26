@@ -8,17 +8,19 @@ class Product {
     private double regularPrice;
     private double discount;
 
-    public Product (String productName) {
+    public Product(String productName) {
         this.productName = productName;
     }
 
     private double actualPrice() {
         double discountedPrice = (regularPrice * discount) / 100;
         return regularPrice - discountedPrice;
-        }
+    }
+
     public void setRegularPrice(double regularPrice) {
         this.regularPrice = regularPrice;
-        }
+    }
+
     public void setDiscount(double discount) {
         this.discount = discount;
     }
