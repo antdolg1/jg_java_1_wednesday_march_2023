@@ -3,7 +3,7 @@ package students.igors_gergeleziu.lesson_3.level_3;
 class Robot2 {
     String name;
 
-    public Robot2(String robotName) {
+    Robot2(String robotName) {
         this.name = robotName;
 
     }

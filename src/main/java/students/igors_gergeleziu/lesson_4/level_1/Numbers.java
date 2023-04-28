@@ -2,7 +2,7 @@ package students.igors_gergeleziu.lesson_4.level_1;
 
 import java.util.Scanner;
 
- public class Numbers {
+public class Numbers {
     int wholeNumber;
     int number1;
     int number2;
