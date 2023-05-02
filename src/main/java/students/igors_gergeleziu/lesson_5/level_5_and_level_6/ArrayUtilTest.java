@@ -41,7 +41,7 @@ class ArrayUtilTest {
     }
 
     void checkResult(boolean condition, String testName) {
-        if (condition == true) {
+        if (condition) {
             System.out.println(testName + " = OK");
         } else {
             System.out.println(testName + " = FAIL");

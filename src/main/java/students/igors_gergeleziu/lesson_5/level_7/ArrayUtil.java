@@ -25,8 +25,7 @@ class ArrayUtil {
 
     int[] generateArrayRandomSize() {
         Random random = new Random();
-        int[] array = new int[random.nextInt(100)];
-        return array;
+        return new int[random.nextInt(100)];
     }
 
     void fillArrayWithRandomNumbers(int[] array) {

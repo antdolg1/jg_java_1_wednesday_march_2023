@@ -15,8 +15,7 @@ class Task26 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter size of array: ");
         int sizeOfArray = scanner.nextInt();
-        int[] array = new int[sizeOfArray];
-        return array;
+        return new int[sizeOfArray];
     }
 
     void fillArrayWithRandomIntegers(int[] array) {

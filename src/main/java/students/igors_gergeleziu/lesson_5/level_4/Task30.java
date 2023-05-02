@@ -13,8 +13,7 @@ class Task30 {
 
     int[] generateArrayRandomSize() {
         Random random = new Random();
-        int[] array = new int[random.nextInt(101)];
-        return array;
+        return new int[random.nextInt(101)];
     }
 
     void fillArrayWithRandomIntegers(int[] array) {
