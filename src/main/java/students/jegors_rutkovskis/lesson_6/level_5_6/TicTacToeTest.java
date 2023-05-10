@@ -21,7 +21,7 @@ class TicTacToeTest {
                              { -1,  -1,  -1}
                            };
         int[][] actual = victim.createField();
-        testResult(expected, actual, "should create field new with -1 cells");
+        testResult(expected, actual, "should create new field with -1 cells");
     }
     void isDrawPositionTest() {
         TicTacToe victim = new TicTacToe();

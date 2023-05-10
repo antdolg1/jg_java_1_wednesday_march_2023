@@ -6,7 +6,7 @@ class TicTacToe {
     int[][] createField() {
         int[][] arr = new int[3][3];
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = -1;
             }
         }
@@ -18,9 +18,9 @@ class TicTacToe {
                 || isWinPositionForDiagonals(field, playerToCheck);
     }
     boolean isDrawPosition(int[][] field) {
-        for (int[] ints : field) {
-            for (int j = 0; j < field.length; j++) {
-                if (ints[j] == -1) {
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (field[i][j] == -1) {
                     return false;
                 }
             }
@@ -36,8 +36,8 @@ class TicTacToe {
     boolean isWinPositionForHorizontals(int[][] field, int playerToCheck) {
         for (int[] ints : field) {
             int count = 0;
-            for (int j = 0; j < field.length; j++) {
-                if (ints[j] == playerToCheck) {
+            for (int anInt : ints) {
+                if (anInt == playerToCheck) {
                     count++;
                 }
                 if (count == 3) {
@@ -50,7 +50,7 @@ class TicTacToe {
     boolean isWinPositionForVerticals(int[][] field, int playerToCheck) {
         for (int i = 0; i < field.length; i++) {
             int count = 0;
-            for (int j = 0; j < field.length; j++) {
+            for (int j = 0; j < field[i].length; j++) {
                 if (field[j][i] == playerToCheck) {
                     count++;
                 }
@@ -87,7 +87,7 @@ class TicTacToe {
         System.out.println("--------------");
         for (int i = 0; i < field.length; i++) {
             System.out.print("|");
-            for (int j = 0; j < field.length; j++) {
+            for (int j = 0; j < field[i].length; j++) {
                 if (field[i][j] == -1) {
                     System.out.print("(" + i + "" + j + ")");
                 } else if (field[i][j] == 0) {
@@ -105,7 +105,7 @@ class TicTacToe {
         System.out.println("---------");
         for (int i = 0; i < field.length; i++) {
             System.out.print("| ");
-            for (int j = 0; j < field.length; j++) {
+            for (int j = 0; j < field[i].length; j++) {
                 if (field[i][j] == -1) {
                     System.out.print("  ");
                 } else if (field[i][j] == 0) {

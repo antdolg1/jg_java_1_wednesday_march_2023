@@ -7,5 +7,16 @@ class TwoDimensionalArrayDemo {
         demo.fillTwoDimArrayWithRandomNumbers(matrix);
         demo.printMatrix(matrix);
         System.out.println("Sum of numbers in array = " + demo.countSum(matrix));
+
+        int[][] twoDimArr = {
+                {1, 2, 3},
+                {1, 1},
+                {3, 3, 3, 3},
+                {4, 4, 4, 4, 4}
+        };
+        demo.printMatrix(twoDimArr);
+        System.out.println();
+        demo.fillTwoDimArrayWithRandomNumbers(twoDimArr);
+        demo.printMatrix(twoDimArr);
     }
 }
