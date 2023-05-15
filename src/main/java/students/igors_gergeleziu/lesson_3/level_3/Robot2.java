@@ -8,11 +8,11 @@ class Robot2 {
 
     }
 
-    public void sayHello() {
+    void sayHello() {
         System.out.println("Hello!");
     }
 
-    public void sayYourName() {
+    void sayYourName() {
         System.out.println("My name is " + name);
     }
 }
