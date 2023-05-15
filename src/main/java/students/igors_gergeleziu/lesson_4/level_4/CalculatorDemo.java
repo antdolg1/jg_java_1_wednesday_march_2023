@@ -11,6 +11,10 @@ class CalculatorDemo {
         System.out.println(calculator.number1+"*"+calculator.number2+"="+multiplication);
         float division= calculator.division(6, 2);
         System.out.println(calculator.number1+"/"+calculator.number2+"="+division);
+        System.out.println("Is number even?");
+        calculator.isEven(7);
+        calculator.maxOfTwoNumbers(1,2);
+        calculator.maxOfThreeNumbers(1,2,3);
 
     }
 }
