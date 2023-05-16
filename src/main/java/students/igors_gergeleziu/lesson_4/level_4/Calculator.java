@@ -6,26 +6,18 @@ class Calculator {
     int number3;
 
     int addition(int number1, int number2) {
-        this.number1 = number1;
-        this.number2 = number2;
         return number1 + number2;
     }
 
     int subtraction(int number1, int number2) {
-        this.number1 = number1;
-        this.number2 = number2;
         return number1 - number2;
     }
 
     int multiplication(int number1, int number2) {
-        this.number1 = number1;
-        this.number2 = number2;
         return number1 * number2;
     }
 
     float division(int number1, int number2) {
-        this.number1 = number1;
-        this.number2 = number2;
         return number1 / (float) number2;
     }
 
@@ -38,8 +30,6 @@ class Calculator {
     }
 
     int maxOfTwoNumbers(int number1, int number2) {
-        this.number1 = number1;
-        this.number2 = number2;
         if (number1 == number2) {
             System.out.println(number1 + " and " + number2 + " are equal");
             return number1;
@@ -51,10 +41,7 @@ class Calculator {
     }
 
     int maxOfThreeNumbers(int number1, int number2, int number3) {
-        this.number1 = number1;
-        this.number2 = number2;
-        this.number3 = number3;
-        if (number1 == number2 && number2 == number3 && number3 == number1) {
+        if (number1 == number2 && number2 == number3) {
             System.out.println(number1 + ", " + number2 + " and " + number3 + " are equal");
             return number1;
         } else if ((number1 == number2) && number1 > number3) {
@@ -72,7 +59,7 @@ class Calculator {
         } else if (number2 > number1 && number2 > number3) {
             System.out.println("Max number: " + number2);
             return number2;
-        }else System.out.println("Max number: " + number3);
+        } else System.out.println("Max number: " + number3);
         return number3;
 
 
