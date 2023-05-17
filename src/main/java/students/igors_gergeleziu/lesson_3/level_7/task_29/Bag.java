@@ -5,7 +5,6 @@ class Bag {
     String bagColor;
     String bagSize;
     int itemAmount;
-    boolean isBagEmpty = true;
 
     Bag(String bagBrand, String bagColor, String bagSize) {
         this.bagBrand = bagBrand;
@@ -13,7 +12,7 @@ class Bag {
         this.bagSize = bagSize;
     }
 
-    void getBagInformation() {
+    void printBagInformation() {
         System.out.println("Bag: " + bagBrand);
         System.out.println("Color: " + bagColor);
         System.out.println("Size: " + bagSize);
@@ -24,8 +23,8 @@ class Bag {
         this.itemAmount += items;
     }
 
-    int getItemAmount() {
-        return this.itemAmount;
+    void printItemAmount() {
+        System.out.println(bagBrand + " contains " + this.itemAmount + " items");
     }
 
     void bagUnpack() {
@@ -33,10 +32,12 @@ class Bag {
         this.itemAmount = 0;
     }
 
-    boolean isBagEmpty() {
-        if (this.itemAmount >= 1) this.isBagEmpty = false;
-        else this.isBagEmpty = true;
-        return isBagEmpty;
+    void isBagEmpty() {
+        if (this.itemAmount >= 1) {
+            System.out.println("Bag is not empty");
+        } else {
+            System.out.println("Bag is empty");
+        }
     }
 
 }
