@@ -9,22 +9,24 @@ class Cat {
     public int catSpeed;
 
 
-    Cat(String Breed, String Color, int Jump, int Weight, int Speed) {
-        this.catBreed = Breed;
-        this.catColor = Color;
-        this.catWeight = Weight;
-        this.catJump = Jump;
-        this.catSpeed = Speed;
+    Cat(String breed, String color, int jump, int weight, int speed) {
+        this.catBreed = breed;
+        this.catColor = color;
+        this.catWeight = weight;
+        this.catJump = jump;
+        this.catSpeed = speed;
     }
 
     public int addWeight(int weightToAdd) {
         catWeight = catWeight + weightToAdd;
         return catWeight;
     }
+
     public int addJump(int jumpToAdd) {
         catJump = catJump + jumpToAdd;
         return catJump;
     }
+
     public int addSpeed(int speedToAdd) {
         catSpeed = catSpeed + speedToAdd;
         return catSpeed;
