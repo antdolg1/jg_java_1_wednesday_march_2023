@@ -8,7 +8,6 @@ public class Dog {
 
     public Dog() {
     }
-
     public Dog(String name, int age, boolean hungry) {
         this.name = name;
         this.age = age;
