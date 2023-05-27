@@ -1,4 +1,4 @@
-package students.andrej_mihailicenko.lesson_8.level_1;
+package students.andrej_mihailicenko.lesson_8.fraud_detection;
 
 class Transaction {
 
@@ -13,14 +13,24 @@ class Transaction {
     public void setTrader(Trader trader) {
         this.trader = trader;
     }
-    public void setAmount(int amount){
+
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
-    public int getAmount(){
+    public int getAmount() {
         return this.amount;
     }
-    public Trader getTrader(){
+
+    public Trader getTrader() {
         return this.trader;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction [" +
+                "trader = " + trader +
+                ", amount = " + amount +
+                ']';
     }
 }
