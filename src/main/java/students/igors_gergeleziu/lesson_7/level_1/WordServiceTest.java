@@ -34,24 +34,24 @@ class WordServiceTest {
     void shouldReturnWordHelloAsFrequentTest() {
         WordService wordService = new WordService();
         String text = "Hello world, hello, hello world!";
-        String textLowerCase=wordService.getTextToLowerCase(text);
-        String textWithoutSymbols=wordService.getTextWithoutSymbols(textLowerCase);
+        String textLowerCase = wordService.getTextToLowerCase(text);
+        String textWithoutSymbols = wordService.getTextWithoutSymbols(textLowerCase);
         checkResult(wordService.findMostFrequentWord(textWithoutSymbols).equals("hello"), "shouldReturnWordHelloAsFrequentTest");
     }
 
     void shouldReturnWordHelloAsFirstFrequentTest() {
         WordService wordService = new WordService();
         String text = "Hello world, hello, hello world! World";
-        String textLowerCase=wordService.getTextToLowerCase(text);
-        String textWithoutSymbols=wordService.getTextWithoutSymbols(textLowerCase);
+        String textLowerCase = wordService.getTextToLowerCase(text);
+        String textWithoutSymbols = wordService.getTextWithoutSymbols(textLowerCase);
         checkResult(wordService.findMostFrequentWord(textWithoutSymbols).equals("hello"), "shouldReturnWordHelloAsFirstFrequentTest");
     }
 
     void shouldReturnEmptySpaceTest() {
         WordService wordService = new WordService();
         String text = "**!@#$%,";
-        String textLowerCase=wordService.getTextToLowerCase(text);
-        String textWithoutSymbols=wordService.getTextWithoutSymbols(textLowerCase);
+        String textLowerCase = wordService.getTextToLowerCase(text);
+        String textWithoutSymbols = wordService.getTextWithoutSymbols(textLowerCase);
         checkResult(wordService.findMostFrequentWord(textWithoutSymbols).equals(""), "shouldReturnEmptySpaceTest");
     }
 

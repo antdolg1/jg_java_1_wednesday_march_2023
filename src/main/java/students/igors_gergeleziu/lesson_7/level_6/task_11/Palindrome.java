@@ -26,10 +26,11 @@ class Palindrome {
         }
 
     }
-    boolean isArrayEmptyOrContainsOneChar(char[]array){
-        boolean isEmpty=false;
-        if(array.length==1 || array[0]=='\n'){
-             isEmpty=true;
+
+    boolean isArrayEmptyOrContainsOneChar(char[] array) {
+        boolean isEmpty = false;
+        if (array.length == 1 || array[0] == '\n') {
+            isEmpty = true;
         }
         return isEmpty;
     }

@@ -33,7 +33,7 @@ class WordService {
                 }
             }
         }
-        System.out.println("Most frequent word is: " + stringsArray[countLinks[1]] + " (found " + countLinks[0] + " times)");
+        //System.out.println("Most frequent word is: " + stringsArray[countLinks[1]] + " (found " + countLinks[0] + " times)");
         return stringsArray[countLinks[1]];//Return the most frequent word
     }
 }

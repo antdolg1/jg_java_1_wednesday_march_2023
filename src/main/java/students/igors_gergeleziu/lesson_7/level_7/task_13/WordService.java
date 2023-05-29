@@ -6,7 +6,23 @@ class WordService {
         int[] wordCountArray;
         textArray = text.split(" ");
         wordCountArray = new int[textArray.length];
+        wordCompareAndCount(wordCountArray, textArray);
+        return textArray[mostFrequentWordIndex(wordCountArray)];
+    }
 
+    int mostFrequentWordIndex(int[] wordCountArray) {
+        int max = 0;
+        int maxIndex = 0;
+        for (int count = 0; count < wordCountArray.length; count++) {
+            if (wordCountArray[count] > max) {
+                max = wordCountArray[count];
+                maxIndex = count;
+            }
+        }
+        return maxIndex;
+    }
+
+    void wordCompareAndCount(int[] wordCountArray, String[] textArray) {
         int wordCounter = 0;
         for (int wordCount = 0; wordCount < textArray.length; wordCount++) {
             for (String s : textArray) {
@@ -17,13 +33,6 @@ class WordService {
             wordCountArray[wordCount] = wordCounter;
             wordCounter = 0;
         }
-
-        int max = 0;
-        for (int count =0; count < wordCountArray.length; count++) {
-            if (wordCountArray[count] > max) {
-                max = count;
-            }
-        }
-        return textArray[max];
     }
+
 }
