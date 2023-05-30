@@ -4,7 +4,7 @@ class ElectricCar extends Car {
 
     private int batteryCharge;
 
-    public ElectricCar(int batteryCharge){
+    public ElectricCar(int batteryCharge) {
         super();
         this.batteryCharge = batteryCharge;
     }
