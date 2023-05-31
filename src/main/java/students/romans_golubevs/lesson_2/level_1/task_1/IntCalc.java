@@ -1,30 +1,30 @@
-package students.romans_golubevs.lesson_2.level_1;
+package students.romans_golubevs.lesson_2.level_1.task_1;
 
 import java.util.Scanner;
 
-public class task_2 {
+public class IntCalc {
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number");
 
-        double number1 = scanner.nextDouble();
+        int number1 = scanner.nextInt();
         System.out.println("Enter second number");
 
-        double number2 = scanner.nextDouble();
+        int number2 = scanner.nextInt();
         System.out.println("Results");
 
-        double summation = number1 + number2;
+        int summation = number1 + number2;
         System.out.println(number1 + " + " + number2 + " = " + summation);
 
-        double subtraction = number1 - number2;
+        int subtraction = number1 - number2;
         System.out.println(number1 + " - " + number2 + " = " + subtraction);
 
-        double multiplication = number1 * number2;
+        int multiplication = number1 * number2;
         System.out.println(number1 + " * " + number2 + " = " + multiplication);
 
-        double division = number1 / number2;
+        int division = number1 / number2;
         System.out.println(number1 + " / " + number2 + " = " + division);
 
     }
