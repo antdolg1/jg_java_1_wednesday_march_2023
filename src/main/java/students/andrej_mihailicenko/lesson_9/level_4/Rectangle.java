@@ -21,6 +21,15 @@ class Rectangle extends Shape {
     }
 
     @Override
+    public String toString() {
+        return "Rectangle{" +
+                "width=" + width +
+                ", length=" + length +
+                ", diagonal=" + diagonal +
+                '}';
+    }
+
+    @Override
     double calculateArea() {
         if (length != 0 && width != 0) {
             return formatNumber(length * width);

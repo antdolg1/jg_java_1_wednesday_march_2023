@@ -24,6 +24,14 @@ class Circle extends Shape {
         return formatNumber(circlePerimeter);
     }
 
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", pi=" + pi +
+                '}';
+    }
+
     private double formatNumber(double number) {
         DecimalFormat df = new DecimalFormat("#.#");
         return Double.parseDouble(df.format(number));

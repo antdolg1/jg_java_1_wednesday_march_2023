@@ -22,6 +22,13 @@ class Square extends Shape {
         return formatNumber(squarePerimeter);
     }
 
+    @Override
+    public String toString() {
+        return "Square{" +
+                "side=" + side +
+                '}';
+    }
+
     private double formatNumber(double number) {
         DecimalFormat df = new DecimalFormat("#.#");
         return Double.parseDouble(df.format(number));

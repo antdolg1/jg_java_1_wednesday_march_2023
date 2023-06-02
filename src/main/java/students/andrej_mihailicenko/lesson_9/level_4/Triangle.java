@@ -22,6 +22,13 @@ class Triangle extends Shape {
         return formatNumber(trianglePerimeter);
     }
 
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "sideLength=" + sideLength +
+                '}';
+    }
+
     private double formatNumber(double number) {
         DecimalFormat df = new DecimalFormat("#.#");
         return Double.parseDouble(df.format(number));
