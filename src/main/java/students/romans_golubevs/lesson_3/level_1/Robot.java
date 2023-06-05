@@ -1,4 +1,4 @@
-package students.romans_golubevs.lesson_3.level_1.task_from_1_to_6;
+package students.romans_golubevs.lesson_3.level_1;
 
 class Robot {
 
