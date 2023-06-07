@@ -1,0 +1,27 @@
+    package students.rina_ka.lesson_2.level_1.task_1;
+
+    import java.util.Scanner;
+
+    public class CalculatorInt {
+
+        public static void main(String[] args) {
+
+            Scanner scan = new Scanner(System.in);
+
+            System.out.println("Enter your first value: ");
+            int firstValue = scan.nextInt();
+
+            System.out.println("Enter your second value: ");
+
+            int secondValue = scan.nextInt();
+
+            int addition = firstValue + secondValue;
+            int subtraction = firstValue - secondValue;
+            int multiplication = firstValue * secondValue;
+            int division = firstValue / secondValue;
+            System.out.println("Result of addition: " + firstValue + "+" + secondValue + " = " + addition);
+            System.out.println("Result of subtraction: " + firstValue + "-" + secondValue + " = " + subtraction);
+            System.out.println("Result of multiplication: " + firstValue + "*" + secondValue + " = " + multiplication);
+            System.out.println("Result of division: " + firstValue + "/" + secondValue+ " = " + division);
+
+            scan.close();
