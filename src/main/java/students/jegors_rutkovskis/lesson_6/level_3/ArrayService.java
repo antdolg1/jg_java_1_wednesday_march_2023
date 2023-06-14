@@ -3,7 +3,7 @@ package students.jegors_rutkovskis.lesson_6.level_3;
 import java.util.Random;
 
 class ArrayService {
-    boolean isContainsValue(int[] array, int value) {
+    boolean containsValue(int[] array, int value) {
         for (int i : array) {
             if (value == i) {
                 return true;
