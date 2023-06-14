@@ -1,5 +1,7 @@
 package students.vladislav_antoniv.lesson_6.level_2;
+
 import java.util.Scanner;
+
 class DayOfTheWeekDetectorDemo {
 
     public static void main(String[] args) {
