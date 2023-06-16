@@ -2,14 +2,26 @@ package students.andrej_mihailicenko.lesson_10.level_5;
 
 interface BookReader {
 
-    public boolean addBookToLibrary(String authorBookToAdd, String titleBookToAdd);
+    boolean addBookToLibrary(String authorBookToAdd, String titleBookToAdd);
 
-    public boolean removeBookFromLibrary(String authorBookToRemove, String titleBookToRemove);
+    boolean removeBookFromLibrary(String authorBookToRemove, String titleBookToRemove);
 
-    public String booksInLibrary();
+    String booksInLibrary();
 
-    public String searchByAuthor(String author);
+    String searchByAuthor(String author);
 
-    public String searchBooksByAuthorPrefix(String authorPrefix);
+    String searchBooksByAuthorPrefix(String authorPrefix);
+
+    String searchByTitle(String title);
+
+    String searchBooksByTitlePrefix(String titlePrefix);
+
+    boolean markAsRead(String bookTitle);
+
+    boolean markAsUnread(String bookTitle);
+
+    String[] getReadBooks();
+
+    String[] getUnreadBooks();
 
 }
