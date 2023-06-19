@@ -1,6 +1,6 @@
 package students.vladislav_antoniv.lesson_7;
 
-import static students.vladislav_antoniv.lesson_7.WordService.findMostFrequentWord;
+import static students.vladislav_antoniv.lesson_7.WordService.findMostFrequentWordInString;
 
 public class WordServiceTest {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class WordServiceTest {
         WordService test1=new WordService();
         String text="text text text not no no yes yes yes";
         String expectedResult="text;3";
-        String actualResult=findMostFrequentWord(text);
+        String actualResult=findMostFrequentWordInString(text);
         if(actualResult.equals(expectedResult)){
             System.out.println("Test ShouldReturnText3 PASSED");
         }
