@@ -20,7 +20,7 @@ class ArrayServiceTest {
         ArrayService victim = new ArrayService();
         int[] testArray = {1, 2, 3};
         int searchValue = 3;
-        boolean actual = victim.isContainsValue(testArray, searchValue);
+        boolean actual = victim.containsValue(testArray, searchValue);
 
         testResult(true, actual, "shouldReturnTrueIfArrayContainsValue");
     }
@@ -28,7 +28,7 @@ class ArrayServiceTest {
         ArrayService victim = new ArrayService();
         int[] testArray = {1, 2, 3};
         int searchValue = 4;
-        boolean actual = victim.isContainsValue(testArray, searchValue);
+        boolean actual = victim.containsValue(testArray, searchValue);
 
         testResult(false, actual, "shouldReturnFalseIfArrayNotContainsValue");
     }

@@ -70,6 +70,10 @@
 * [Лекция 6](https://www.youtube.com/watch?v=b4dySC3DA_s)
 * [Лекция 7](https://www.youtube.com/watch?v=1RXTZKQ1JHw)
 * [Лекция 8](https://www.youtube.com/watch?v=Gy3kcOCfi3U)
+* [Лекция 9](https://www.youtube.com/watch?v=iC0nis8um8E)
+* [Лекция 10](https://www.youtube.com/watch?v=jrh3oihzzsE)
+* [Лекция 11](https://www.youtube.com/watch?v=7o3dH7UUPXE)
+* [Лекция 12](https://www.youtube.com/watch?v=HntP34CSHlY)
 
 ---
 
