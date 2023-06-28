@@ -1,0 +1,58 @@
+Вам поручили задачу по анализу данных в домене трейдеров и транзакций.
+
+Класс Trader:
+
+class Trader {
+    private String name;
+    private String city;
+
+    public Trader(String name, String city) {
+        this.name = name;
+        this.city = city;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getCity() {
+        return this.city;
+    }
+
+    public String toString() {
+        return "Trader:"+this.name + " in " + this.city;
+    }
+}
+
+Класс Transaction:
+
+class Transaction {
+
+    private Trader trader;
+    private int year;
+    private int value;
+
+    public Transaction(Trader trader, int year, int value) {
+        this.trader = trader;
+        this.year = year;
+        this.value = value;
+    }
+
+    public Trader getTrader() {
+        return this.trader;
+    }
+
+    public int getYear() {
+        return this.year;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+
+    public String toString() {
+        return "{" + this.trader + ", " +
+               "year: "+this.year+", " +
+               "value:" + this.value +"}";
+    }
+}

@@ -1,0 +1,41 @@
+Метод findGreenApples() очень понравился фермеру.
+Его следующее требование:
+найти все красные яблоки в своем складе.
+
+Наивный подход - это создание копии метода findGreenApples()
+только для поиска красных яблок findRedApples():
+
+class FruitStorage {
+
+    public List<Apple> findGreenApples(List<Apple> inventory) {
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : inventory) {
+            if("green".equals(apple.getColor())) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    public List<Apple> findRedApples(List<Apple> inventory) {
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : inventory) {
+            if("red".equals(apple.getColor())) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+}
+
+А что если фермер захочет найти яблоки других цветов:
+желтый, оранжевый, тёмно-красный и так далее?
+
+Каждый раз копировать один и тот же код - это очень плохой
+стиль разработки программного обеспечения.
+
+Есть ли более хорошее решение?
+
+Да есть! Параметризация цвета. Вместо копирования методов,
+вынесите в параметр цвет яблок, который нужно найти.

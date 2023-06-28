@@ -1,0 +1,38 @@
+Конечно создавать для каждого года новый метод это не вариант.
+Слишком много годов, слишком много похожих методов.
+
+public List<Transaction> findTransactionsIn2011(List<Transaction> transactions) {
+    return transactions.stream()
+                       .filter(t -> t.getYear() == 2011)
+                       .collect(toList());
+}
+
+public List<Transaction> findTransactionsIn2012(List<Transaction> transactions) {
+    return transactions.stream()
+                       .filter(t -> t.getYear() == 2012)
+                       .collect(toList());
+}
+
+public List<Transaction> findTransactionsIn2013(List<Transaction> transactions) {
+    return transactions.stream()
+                       .filter(t -> t.getYear() == 2013)
+                       .collect(toList());
+}
+
+Что бы сделать этот метод более универсальным можно вынести в параметр метода
+год по которому надо искать и поменять немного название метода:
+
+public List<Transaction> findTransactionsByYear(List<Transaction> transactions, int year) {
+    return transactions.stream()
+                       .filter(t -> t.getYear() == year)
+                       .collect(toList());
+}
+
+Теперь этот метод можно вызывать следующими способами:
+
+List<Transaction> transactions = TransactionTestData.getTransactions();
+List<Transaction> transactions2011 = findTransactionsByYear(transactions, 2011);
+List<Transaction> transactions2012 = findTransactionsByYear(transactions, 2012);
+List<Transaction> transactions2013 = findTransactionsByYear(transactions, 2013);
+
+С помощью тестов докажите, что наш новый метод работает правильно.

@@ -1,0 +1,50 @@
+Конечно создавать для каждого города новый метод это не вариант.
+Слишком много городов, слишком много похожих методов.
+
+public List<String> findTraderNamesFromCambridge(List<Transaction> transactions) {
+    return transactions.stream()
+                       .map(transaction -> transaction.getTrader())
+                       .map(trader -> trader.getCity())
+                       .filter(city -> city.equals("Cambridge"))
+                       .unique()
+                       .collect(toList());
+}
+
+public List<String> findTraderNamesFromLondon(List<Transaction> transactions) {
+    return transactions.stream()
+                       .map(transaction -> transaction.getTrader())
+                       .map(trader -> trader.getCity())
+                       .filter(city -> city.equals("London"))
+                       .unique()
+                       .collect(toList());
+}
+
+public List<String> findTraderNamesFromMilan(List<Transaction> transactions) {
+    return transactions.stream()
+                       .map(transaction -> transaction.getTrader())
+                       .map(trader -> trader.getCity())
+                       .filter(city -> city.equals("Milan"))
+                       .unique()
+                       .collect(toList());
+}
+
+Что бы сделать этот метод более универсальным можно вынести в параметр метода
+название города по которому надо искать и поменять немного название самого метода:
+
+public List<String> findTraderNamesFromCity(List<Transaction> transactions, String cityToFind) {
+    return transactions.stream()
+                       .map(transaction -> transaction.getTrader())
+                       .map(trader -> trader.getCity())
+                       .filter(city -> city.equals(cityToFind))
+                       .unique()
+                       .collect(toList());
+}
+
+Теперь этот метод можно вызывать следующими способами:
+
+List<Transaction> transactions = TransactionTestData.getTransactions();
+List<String> traderNamesFromCambridge = findTraderNamesFromCity(transactions, "Cambridge");
+List<String> traderNamesFromLondon = findTraderNamesFromCity(transactions, "London");
+List<String> traderNamesFromMilan = findTraderNamesFromCity(transactions, "Milan");
+
+С помощью тестов докажите, что наш новый метод работает правильно.

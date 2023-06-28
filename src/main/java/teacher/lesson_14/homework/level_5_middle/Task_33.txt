@@ -1,0 +1,13 @@
+При реализации задачи из предыдущего задания у вас получился такой метод:
+
+public boolean isAnyTraderBasedOnMilan(List<Transaction> transactions) {
+    return transactions.stream()
+                       .anyMatch(transaction -> transaction.getTrader().getCity().equals("Milan"));
+}
+
+Представьте себе, что вас попросили найти ответит
+на вопрос: работают ли трейдеры в других городах:
+Cambridge, London, и т.д. Для каждого города вы
+будете писать свой метод? Или есть более простой способ это сделать?
+
+Как сделать метод isAnyTraderBasedOnMilan() более универсальным?

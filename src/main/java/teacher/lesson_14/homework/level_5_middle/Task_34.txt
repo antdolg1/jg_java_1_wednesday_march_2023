@@ -1,0 +1,34 @@
+Конечно создавать для каждого города новый метод это не вариант.
+Слишком много городов, слишком много похожих методов.
+
+public boolean isAnyTraderBasedOnMilan(List<Transaction> transactions) {
+    return transactions.stream()
+                       .anyMatch(transaction -> transaction.getTrader().getCity().equals("Milan"));
+}
+
+public boolean isAnyTraderBasedOnLondon(List<Transaction> transactions) {
+    return transactions.stream()
+                       .anyMatch(transaction -> transaction.getTrader().getCity().equals("London"));
+}
+
+public boolean isAnyTraderBasedOnCambridge(List<Transaction> transactions) {
+    return transactions.stream()
+                       .anyMatch(transaction -> transaction.getTrader().getCity().equals("Cambridge"));
+}
+
+Что бы сделать этот метод более универсальным можно вынести в параметр метода
+название города по которому надо искать и поменять немного название самого метода:
+
+public boolean isAnyTraderBasedOnCity(List<Transaction> transactions, String cityToCheck) {
+    return transactions.stream()
+                       .anyMatch(transaction -> transaction.getTrader().getCity().equals(cityToCheck));
+}
+
+Теперь этот метод можно вызывать следующими способами:
+
+List<Transaction> transactions = TransactionTestData.getTransactions();
+boolean cambridgeBased = isAnyTraderBasedOnCity(transactions, "Cambridge");
+boolean londonBased = isAnyTraderBasedOnCity(transactions, "London");
+boolean milanBased = isAnyTraderBasedOnCity(transactions, "Milan");
+
+С помощью тестов докажите, что наш новый метод работает правильно.
