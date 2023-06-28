@@ -1,0 +1,15 @@
+Создайте реализацию ApplePredicate для поиска тяжёлых зелёных яблок.
+
+class AppleGreenAndHeavyWeightPredicate implements ApplePredicate {
+    public boolean test (Apple apple) {
+        return "green".equals(apple.getColor())
+                && apple.getWeight() > 150;
+    }
+}
+
+Параметризация поведения великолепна, потому что она позволяет
+вам отделить логику итерации (цикл for) коллекции для фильтрации и поведение,
+применяемое к каждому элементу этой коллекции. Как следствие,
+вы можете повторно использовать один и тот же метод (findApples())
+и подавая в качестве параметра разные реализации интерфейса
+ApplePredicate добиться разного поведения.

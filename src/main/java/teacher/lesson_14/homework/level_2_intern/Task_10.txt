@@ -1,0 +1,27 @@
+Но как мы можем использовать различные реализации ApplePredicate?
+Нам нужен метод filterApples() с параметром ApplePredicate
+для проверки условий. Это и есть параметризация поведения:
+способность сказать методу, чтобы он принимал несколько поведений
+(или стратегий) в качестве параметров и использовал их
+внутри для достижения различного поведения.
+
+class FruitStorage {
+
+    public List<Apple> findApples(List<Apple> inventory, ApplePredicate p) {
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : inventory) {
+            if(p.test(apple)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+}
+
+Напишите тесты на метод findApples() в которых
+протестируйте работу метода с разными предикатами:
+- findApples(...., new AppleGreenColorPredicate());
+- findApples(...., new AppleRedColorPredicate());
+- findApples(...., new AppleHeavyWeightPredicate());
+- findApples(...., new AppleLightWeightPredicate());

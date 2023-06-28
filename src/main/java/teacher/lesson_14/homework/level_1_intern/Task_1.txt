@@ -1,0 +1,52 @@
+Хорошо известная проблема в разработке программного обеспечения
+состоит в том, что независимо от того, что вы делаете,
+требования пользователя меняются.
+
+Например, представьте приложение, которое поможет фермеру
+исследовать его запасы.
+
+class Apple {
+
+    private String color;
+    private int weight;
+
+    public Apple (String color, int weight) {
+        this.color = color;
+        this.weight = weight;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+}
+
+class FruitStorage {
+
+    public List<Apple> getAllApples() {
+        List<Apple> apples = new ArrayList<>();
+        apples.add(new Apple("red", 100));
+        apples.add(new Apple("red", 160));
+        apples.add(new Apple("red", 200));
+        apples.add(new Apple("green", 200));
+        apples.add(new Apple("green", 90));
+        apples.add(new Apple("green", 50));
+        apples.add(new Apple("yellow", 50));
+        apples.add(new Apple("yellow", 170));
+        return apples;
+    }
+
+
+}
+
+Первое требование фермера:
+найти все зеленые яблоки в своем складе.
+
+В классе FruitStorage создайте метод для реализации этого требования.
+
+Создайте класс FruitStorageTest и напишите тест,
+опираясь на данные из FruitStorage.getAllApples().

@@ -1,0 +1,35 @@
+Вам поручили задачу по анализу данных в домене трейдеров и транзакций.
+
+Создайте класс TransactionAnalysisService:
+
+class TransactionAnalysisService {
+
+
+}
+
+Напишите метод, который принимает на вход список транзакций
+и находит все транзакции совершённые в 2011 году. Реализацию
+этого метода напишите с использованием Stream API.
+
+Создайте класс TransactionAnalysisServiceTest, и напишите тест
+для созданного вами метода. Для тестирования используйте следующие тестовые данные:
+
+class TransactionTestData {
+
+    public List<Transaction> getTransactions() {
+        Trader raoul = new Trader("Raoul", "Cambridge");
+        Trader mario = new Trader("Mario","Milan");
+        Trader alan = new Trader("Alan","Cambridge");
+        Trader brian = new Trader("Brian","Cambridge");
+
+        List<Transaction> transactions = Arrays.asList(
+            new Transaction(brian, 2011, 300),
+            new Transaction(raoul, 2012, 1000),
+            new Transaction(raoul, 2011, 400),
+            new Transaction(mario, 2012, 710),
+            new Transaction(mario, 2012, 700),
+            new Transaction(alan, 2012, 950)
+        );
+    }
+
+}

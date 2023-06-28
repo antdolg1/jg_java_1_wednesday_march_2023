@@ -1,0 +1,3 @@
+Прочитать главу 3 (Lambda expressions)
+книги "Java 8 in Action"
+(Java 8 in Action: Lambdas, streams, and functional-style programming).
