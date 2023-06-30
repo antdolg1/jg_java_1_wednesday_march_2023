@@ -1,0 +1,9 @@
+Почему класс AccessDeniedException в нашем случае
+лучше наследовать от Exception, а не от RuntimeException?
+
+class AccessDeniedException extends Exception {
+
+}
+
+Лучше наследовать от Exception, а не от RuntimeException :
+    Код вынужден проверить есть ли роль используя метод throws;
