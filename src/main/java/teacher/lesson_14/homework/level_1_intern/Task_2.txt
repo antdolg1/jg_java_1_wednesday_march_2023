@@ -1,0 +1,22 @@
+Первая попытка реализации требование фермера:
+найти все зеленые яблоки в своем складе.
+
+class FruitStorage {
+
+    public List<Apple> findGreenApples(List<Apple> inventory) {
+        List<Apple> result = new ArrayList<>();
+        for(Apple apple : inventory) {
+            if("green".equals(apple.getColor())) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+}
+
+Метод findGreenApples() очень понравился фермеру.
+Его следующее требование:
+найти все красные яблоки в своем складе.
+
+Что вы будете делать?

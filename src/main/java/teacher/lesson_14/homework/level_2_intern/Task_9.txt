@@ -1,0 +1,33 @@
+Создайте реализацию интерфейса ApplePredicate для выбора:
+
+- зелёных яблок
+
+class AppleGreenColorPredicate implements ApplePredicate {
+    public boolean test (Apple apple) {
+        return "green".equals(apple.getColor));
+    }
+}
+
+- красных яблок
+
+class AppleRedColorPredicate implements ApplePredicate {
+    public boolean test (Apple apple) {
+        return "red".equals(apple.getColor));
+    }
+}
+
+- тяжелых яблок (> 150 г.)
+
+class AppleHeavyWeightPredicate implements ApplePredicate {
+    public boolean test (Apple apple) {
+        return apple.getWeight() > 150;
+    }
+}
+
+- лёгких яблок ( < 150 г.)
+
+class AppleLightWeightPredicate implements ApplePredicate {
+    public boolean test (Apple apple) {
+        return apple.getWeight() < 150;
+    }
+}
