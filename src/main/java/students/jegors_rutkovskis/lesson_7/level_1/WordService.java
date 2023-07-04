@@ -1,9 +1,8 @@
 package students.jegors_rutkovskis.lesson_7.level_1;
 class WordService {
     public String findMostFrequentWord(String text) {
-        String lowerCaseText = toLowerCase(text);
-        String[] wordsArr = textToArray(lowerCaseText);
-        return findMostFrequentWord(wordsArr);
+        return findMostFrequentWord(text.toLowerCase()
+                .split("[^\\p{L}]+"));
     }
     String findMostFrequentWord(String[] wordsArr) {
         String mostFrequent = wordsArr[0];
@@ -25,11 +24,5 @@ class WordService {
             }
         }
         return count;
-    }
-    String toLowerCase(String text) {
-        return text.toLowerCase();
-    }
-    String[] textToArray(String text) {
-        return text.split("[^\\p{L}]+");
     }
 }
