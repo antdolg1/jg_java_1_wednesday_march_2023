@@ -1,4 +1,4 @@
-package students.igors_gergeleziu.lesson_8.level_1;
+package students.igors_gergeleziu.lesson_8;
 
 class FraudRule2Test {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package students.igors_gergeleziu.lesson_8.level_1;
+package students.igors_gergeleziu.lesson_8;
 
 class FraudRule3 extends FraudRule {
     public FraudRule3(String ruleName) {
