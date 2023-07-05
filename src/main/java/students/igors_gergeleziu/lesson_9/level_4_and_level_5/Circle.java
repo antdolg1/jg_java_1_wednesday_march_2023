@@ -1,4 +1,4 @@
-package students.igors_gergeleziu.lesson_9.level_4;
+package students.igors_gergeleziu.lesson_9.level_4_and_level_5;
 
 class Circle extends Shape {
     private double radius;

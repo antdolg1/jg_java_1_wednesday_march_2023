@@ -1,7 +1,6 @@
-package students.igors_gergeleziu.lesson_9.level_4;
+package students.igors_gergeleziu.lesson_9.level_4_and_level_5;
 
 import java.util.Random;
-import java.util.Scanner;
 
 class ShapeUtil {
     Shape createRandomShape() {
