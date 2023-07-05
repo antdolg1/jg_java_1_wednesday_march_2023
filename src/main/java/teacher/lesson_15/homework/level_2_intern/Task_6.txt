@@ -1,0 +1,48 @@
+Дан класс QuadraticEq и метод calc() для вычисления корней квадратного
+уравнения. Как можно сделать этот метод более понятным для человека?
+
+class QuadraticEq {
+
+    public void calc(double a, double b, double c) {
+        double discriminant = b * b - 4 * a * c;
+        if (discriminant > 0) {
+            discriminantGreaterThanZero(a, b, D);
+        }
+        else if (discriminant == 0) {
+            discriminantEqualsZero(a, b);
+        }
+        else {
+            discriminantLessThanZero();
+        }
+    }
+
+    public void discriminantGreaterThanZero(double a, double b, double discriminant) {
+        double x1 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        double x2 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        System.out.println("x1 = " + x1 + ", x2 = " + x2);
+    }
+
+    public void discriminantEqualsZero(double a, double b) {
+        double x = -b / (2 * a);
+        System.out.println("x = " + x);
+    }
+
+    public void discriminantLessThanZero() {
+        System.out.println("Equation has no roots");
+    }
+
+}
+
+Теперь этот код стал более легко читаемым, в нём появилась чёткая
+структура, которая соответствует решению бизнес задачи.
+
+Как протестировать этот код?
+Что нужно сделать с этим кодом, для
+того, чтобы написать автоматические тесты?
+
+Подсказка: если метод печатает результат на консоль, то такой метод
+протестировать будет очень сложно. Такой метод не следует принципу
+Single Responsibility Principle (принципу одной ответственности).
+То есть метод и вычисляет результат и печатает его на консоль. В идеале
+метод должен делать что-то одно. Сделайте так, что бы все методы
+в классе QuadraticEq следовали Single Responsibility Principle принципу!

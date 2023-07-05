@@ -1,0 +1,26 @@
+После рефакторинга класс WordsService может выглядеть вот так:
+
+class WordsService {
+
+    public int countRepetitions(String[] words, String repeatingWord) {
+        int repetitions = 0;
+        for (String word : words) {
+            if (word.equals(repeatingWord)) {
+                repetitions++;
+            }
+        }
+        return repetitions;
+    }
+
+}
+
+sum заменили на repetitions,
+wordToCount заменили на repeatingWord.
+
+Изменения конечно незначительные, но представьте на миг, что
+вы работаете действительно в большом проекте. Как добиться
+более качественного кода, чтобы с ним было проще работать?
+
+Качественный код можно получить только в процессе вот таких
+вот маленьких улучшений, регулярно делая небольшие изменения,
+которые постепенно аккумулируются и превращаются в чистый код!

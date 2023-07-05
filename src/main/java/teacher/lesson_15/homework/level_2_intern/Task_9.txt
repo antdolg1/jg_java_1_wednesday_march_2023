@@ -1,0 +1,54 @@
+Представьте, что ваш коллега программист прислал вам на проверку (code review)
+следующий код:
+
+class FraudDetector {
+
+    boolean isFraud(Trader trader) {
+        if (compareTraderName(trader)
+                ||
+           (compareCity(trader))
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+   boolean compareTraderName (Trader trader) {
+       String traderName = trader.getFullName();
+       if (traderName.equals("Pokemon")) {
+       }
+       return true;
+   }
+
+    boolean compareCity(Trader trader) {
+        String cityName = trader.getCity();
+        if (cityName.equals("Sidney")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+}
+
+Что вы скажете об этом коде?
+Попробуйте критически оценить этот код.
+
+Работает ли этот код корректно (особенно метод compareTraderName())?
+
+Как убедиться в том, что этот код работает правильно? Что надо потребовать
+от вашего коллеги, что бы убедить вас в том, что этот код работает правильно?
+
+Подходящие ли имена выбраны для методов compareTraderName() и compareCity()?
+Выражают ли имена методов compareTraderName() и compareCity() суть поставленной
+бизнесом задачи или нет? Они просто сравнивают имена трейдеров и городов (с чем?)
+или находят мошенников трейдеров и заблокированные для трейдинга города?
+
+Правильные ли идентификаторы доступа выбраны для методов
+isFraud(), compareTraderName() и compareCity()? Какие из этих методов должны
+быть public, а какие private?
+
+Можно ли упростить код в методах isFraud(), compareTraderName() и compareCity()?
+Особенно это касается if else логики. Если можно, то как? Предложите свой вариант.
+Напишите тесты и проведите рефакторинг.

@@ -1,0 +1,2 @@
+Прочитать первую главу книги
+"Refactoring, Improving the Design of Existing Code" Мартина Фаулера.

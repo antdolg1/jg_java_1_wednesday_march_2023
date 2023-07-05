@@ -1,0 +1,60 @@
+Взгляните на класс QuadraticEq со стороны клиента, другого класса
+в компьютерной системе. Какой функционал (метод) нужен клиентам
+класса QuadraticEq:
+- String calc(double a, double b, double c),
+- String discriminantGreaterThanZero(double a, double b, double discriminant),
+- String discriminantEqualsZero(double a, double b),
+- String discriminantLessThanZero()?
+
+Так как класс QuadraticEq инкапсулирует логику расчёта корней
+квадратного уравнения, то очевидно, что клиенты (другие классы в системе)
+будут вызывать только метод calc(...). То есть клиентов не интересует
+из каких частей состоит вычисление корней квадратного уравнения,
+клиентов интересует сама возможность расчёта корней квадратного уравнения.
+
+Поэтому не имеет смысла оставлять все методы в классе QuadraticEq
+публичными. Все публичные методы видны клиентам и будут их путать.
+Какой же метод из всех нужно вызвать? Вот так будет думать клиент,
+когда вместо одного публичного метода увидит сразу четыре.
+Публичными нужно оставлять только те методы, которые будут вызываться
+другими классами, а все остальные методы в классе должны быть приватными.
+Чем проще будет внешний интерфейс
+(то как виден ваш класс другим классам) вашего класса тем лучше!
+
+Сделайте приватными все методы в классе QuadraticEq, кроме calc().
+Убедитесь, что написанные вами автоматические тесты вызывают
+именно метод calc(). Ваши автоматические тесты это те же самые
+клиенты вашего класса, они должны использовать его точно так же
+как другие классы.
+
+class QuadraticEq {
+
+    public String calc(double a, double b, double c) {
+        double discriminant = b * b - 4 * a * c;
+        if (discriminant > 0) {
+            return discriminantGreaterThanZero(a, b, D);
+        }
+        else if (discriminant == 0) {
+            return discriminantEqualsZero(a, b);
+        }
+        else {
+            return discriminantLessThanZero();
+        }
+    }
+
+    public String discriminantGreaterThanZero(double a, double b, double discriminant) {
+        double x1 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        double x2 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        return "x1 = " + x1 + ", x2 = " + x2;
+    }
+
+    public String discriminantEqualsZero(double a, double b) {
+        double x = -b / (2 * a);
+        return "x = " + x;
+    }
+
+    public String discriminantLessThanZero() {
+        return "Equation has no roots";
+    }
+
+}
