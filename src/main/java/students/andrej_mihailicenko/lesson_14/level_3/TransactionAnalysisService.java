@@ -2,6 +2,7 @@ package students.andrej_mihailicenko.lesson_14.level_3;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
@@ -78,4 +79,31 @@ class TransactionAnalysisService {
                 .anyMatch(transaction -> transaction.getTrader().getCity().equals(City));
     }
 
+    public Optional<Integer> findMaxValue(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getValue)
+                .max(Comparator.naturalOrder());
+    }
+
+    public Optional<Integer> findMinValue(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getValue)
+                .min(Comparator.naturalOrder());
+    }
+
+    public String tradersNamesInAlphabeticalOrder(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(","));
+    }
+
+    public String tradersCityInAlphabeticalOrder(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getCity())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(","));
+    }
 }

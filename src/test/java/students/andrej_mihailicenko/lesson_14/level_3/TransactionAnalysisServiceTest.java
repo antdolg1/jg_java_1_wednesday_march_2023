@@ -5,6 +5,7 @@ import org.junit.Before;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,7 +21,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void findTransactionsByYear2011() {
+    public void testFindTransactionsByYear2011() {
 
         Trader brian = new Trader("Brian", "Cambridge");
         Trader raoul = new Trader("Raoul", "Cambridge");
@@ -33,7 +34,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void findTransactionsByYear2012() {
+    public void testFindTransactionsByYear2012() {
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario", "Milan");
         Trader alan = new Trader("Alan", "Cambridge");
@@ -50,7 +51,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void sortTransactionsFromMinToMax() {
+    public void testSortTransactionsFromMinToMax() {
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario", "Milan");
         Trader alan = new Trader("Alan", "Cambridge");
@@ -70,7 +71,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void sortTransactionsFromMaxToMin() {
+    public void testSortTransactionsFromMaxToMin() {
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario", "Milan");
         Trader alan = new Trader("Alan", "Cambridge");
@@ -89,7 +90,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void sortTransactionsByYearFromMinToMaX() {
+    public void testSortTransactionsByYearFromMinToMaX() {
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario", "Milan");
         Trader alan = new Trader("Alan", "Cambridge");
@@ -104,7 +105,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void sortTransactionsByYearNonUnique() {
+    public void testSortTransactionsByYearNonUnique() {
 
         List<Integer> expected = new ArrayList<>();
         expected.add(2011);
@@ -119,7 +120,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void sortTransactionsByYearUnique() {
+    public void testSortTransactionsByYearUnique() {
 
         List<Integer> expected = new ArrayList<>();
         expected.add(2011);
@@ -130,7 +131,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void sortTradersByName() {
+    public void testSortTradersByName() {
 
         List<String> expected = new ArrayList<>();
         expected.add("Alan");
@@ -143,7 +144,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void sortTradersByCity() {
+    public void testSortTradersByCity() {
 
         List<String> expected = new ArrayList<>();
         expected.add("Cambridge");
@@ -154,7 +155,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void findTradersByCity() {
+    public void testFindTradersByCity() {
 
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario", "Milan");
@@ -171,7 +172,7 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void ifTraderEmployedInCityCambridge() {
+    public void testIfTraderEmployedInCityCambridge() {
 
         boolean expected = true;
         boolean actual = transactionAnalysisService.ifTraderEmployedInCity(transactions, "Cambridge");
@@ -179,10 +180,46 @@ public class TransactionAnalysisServiceTest {
     }
 
     @Test
-    public void ifTraderEmployedInCityLondon() {
+    public void testIfTraderEmployedInCityLondon() {
 
         boolean expected = false;
         boolean actual = transactionAnalysisService.ifTraderEmployedInCity(transactions, "London");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFindMaxValue() {
+
+        Optional<Integer> expected = Optional.of(1000);
+        Optional<Integer> actual = transactionAnalysisService.findMaxValue(transactions);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFindMinValue() {
+
+        Optional<Integer> expected = Optional.of(300);
+        Optional<Integer> actual = transactionAnalysisService.findMinValue(transactions);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testTradersNamesInAlphabeticalOrder() {
+
+        String expected = "Alan,Brian,Mario,Raoul";
+        String actual = transactionAnalysisService.tradersNamesInAlphabeticalOrder(transactions);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testTradersCityInAlphabeticalOrder() {
+
+        String expected = "Cambridge,Milan";
+        String actual = transactionAnalysisService.tradersCityInAlphabeticalOrder(transactions);
+
         assertEquals(expected, actual);
     }
 }
