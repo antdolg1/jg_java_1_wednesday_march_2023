@@ -4,36 +4,78 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
+
 class TransactionAnalysisService {
 
     public List findTransactionsByYear(List<Transaction> transactions, int year) {
-        List<Transaction> transactionAnalise = transactions.stream()
+        return transactions.stream()
                 .filter(t -> t.getYear() == year)
-                .collect(Collectors.toList());
-        return transactionAnalise;
+                .collect(toList());
     }
 
     public List sortTransactionsByValueFromMinToMax(List<Transaction> transactions) {
-        List<Transaction> transactionFromMinToMax = transactions.stream()
+        return transactions.stream()
                 .sorted(Comparator.comparingInt(t -> t.getValue())) //тоже самое, что .sorted(Comparator.comparingInt(Transaction::getValue))
-                .collect(Collectors.toList());
-        return transactionFromMinToMax;
+                .collect(toList());
     }
 
     public List sortTransactionsByValueFromMaxToMin(List<Transaction> transactions) {
-        List<Transaction> transactionFromMinToMax = transactions.stream()
+        return transactions.stream()
                 .sorted(Comparator.comparingInt(Transaction::getValue).reversed())
-                .collect(Collectors.toList());
-        return transactionFromMinToMax;
+                .collect(toList());
     }
 
     public List sortTransactionsByYearAndByValueFromMaxToMin(List<Transaction> transactions, int year) {
-        List<Transaction> transactionFromMinToMaxAndByYear = transactions.stream()
+        return transactions.stream()
                 .filter(t -> t.getYear() == year)
                 .sorted(Comparator.comparingInt(Transaction::getValue))
-                .collect(Collectors.toList());
-        return transactionFromMinToMaxAndByYear;
+                .collect(toList());
     }
 
+    public List sortTransactionsNonUniqueYears(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getYear)
+                .sorted()
+                .collect(toList());
+    }
+
+    public List sortTransactionsUniqueYears(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(Transaction::getYear)
+                .distinct()
+                .sorted()
+                .collect(toList());
+    }
+
+
+    public List sortTradersByName(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .collect(toList());
+    }
+
+    public List sortTradersByCity(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> transaction.getTrader().getCity())
+                .distinct()
+                .sorted()
+                .collect(toList());
+    }
+
+    public List<Trader> findTraderByCity(List<Transaction> transactions, String City) {
+        return transactions.stream()
+                .map(Transaction::getTrader)
+                .filter(trader -> trader.getCity().equals(City))
+                .distinct()
+                .collect(toList());
+    }
+
+    public boolean ifTraderEmployedInCity(List<Transaction> transactions, String City) {
+        return transactions.stream()
+                .anyMatch(transaction -> transaction.getTrader().getCity().equals(City));
+    }
 
 }

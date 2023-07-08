@@ -21,9 +21,9 @@ public class TransactionAnalysisServiceTest {
 
     @Test
     public void findTransactionsByYear2011() {
+
         Trader brian = new Trader("Brian", "Cambridge");
         Trader raoul = new Trader("Raoul", "Cambridge");
-
         List<Transaction> expected = new ArrayList<>();
         expected.add(new Transaction(brian, 2011, 300));
         expected.add(new Transaction(raoul, 2011, 400));
@@ -100,6 +100,89 @@ public class TransactionAnalysisServiceTest {
         expected.add(new Transaction(raoul, 2011, 400));
 
         List<Transaction> actual = transactionAnalysisService.sortTransactionsByYearAndByValueFromMaxToMin(transactions, 2011);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sortTransactionsByYearNonUnique() {
+
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2011);
+        expected.add(2011);
+        expected.add(2012);
+        expected.add(2012);
+        expected.add(2012);
+        expected.add(2012);
+
+        List<Transaction> actual = transactionAnalysisService.sortTransactionsNonUniqueYears(transactions);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sortTransactionsByYearUnique() {
+
+        List<Integer> expected = new ArrayList<>();
+        expected.add(2011);
+        expected.add(2012);
+
+        List<Transaction> actual = transactionAnalysisService.sortTransactionsUniqueYears(transactions);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sortTradersByName() {
+
+        List<String> expected = new ArrayList<>();
+        expected.add("Alan");
+        expected.add("Brian");
+        expected.add("Mario");
+        expected.add("Raoul");
+
+        List<Transaction> actual = transactionAnalysisService.sortTradersByName(transactions);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sortTradersByCity() {
+
+        List<String> expected = new ArrayList<>();
+        expected.add("Cambridge");
+        expected.add("Milan");
+
+        List<Transaction> actual = transactionAnalysisService.sortTradersByCity(transactions);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void findTradersByCity() {
+
+        Trader raoul = new Trader("Raoul", "Cambridge");
+        Trader mario = new Trader("Mario", "Milan");
+        Trader alan = new Trader("Alan", "Cambridge");
+        Trader brian = new Trader("Brian", "Cambridge");
+
+        List<Trader> expected = new ArrayList<>();
+        expected.add(new Trader("Brian", "Cambridge"));
+        expected.add(new Trader("Raoul", "Cambridge"));
+        expected.add(new Trader("Alan", "Cambridge"));
+
+        List actual = transactionAnalysisService.findTraderByCity(transactions, "Cambridge");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void ifTraderEmployedInCityCambridge() {
+
+        boolean expected = true;
+        boolean actual = transactionAnalysisService.ifTraderEmployedInCity(transactions, "Cambridge");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void ifTraderEmployedInCityLondon() {
+
+        boolean expected = false;
+        boolean actual = transactionAnalysisService.ifTraderEmployedInCity(transactions, "London");
         assertEquals(expected, actual);
     }
 }
