@@ -1,4 +1,4 @@
-package students.edmund_zukovskis.lesson_10.level_1.task_2;
+package students.igors_gergeleziu.lesson_10.level_1;
 
 import java.util.Arrays;
 import java.util.OptionalInt;
@@ -44,3 +44,5 @@ class ArrayUtilImpl implements ArrayUtil {
         return minValue;
     }
 }
+
+

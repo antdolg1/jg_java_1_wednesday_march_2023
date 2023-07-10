@@ -1,8 +1,6 @@
-package students.edmund_zukovskis.lesson_10.level_2;
-
+package students.igors_gergeleziu.lesson_10.level_2;
 
 class DayOfTheWeekDetectorIfVersion implements DayOfTheWeekDetector {
-
     @Override
     public String detectDayName(int number) {
         if (number == 1) {
