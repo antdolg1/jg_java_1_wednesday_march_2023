@@ -1,0 +1,12 @@
+Почему класс AccessDeniedException в нашем случае
+лучше наследовать от Exception, а не от RuntimeException?
+
+class AccessDeniedException extends Exception {
+
+}
+
+В нашем случае мы знаем, что может возникнуть исключение,
+поэтому используем проверяемое исключение (Checked), путём наследования от класса Exception
+которе явно объявляем в сигнатуре метода.
+
+RuntimeException относится к непроверяемым (Unchecked).
